@@ -31,13 +31,13 @@ export function Navigation() {
           : 'bg-transparent'
         }`}
     >
-      <div className="max-w-none w-full px-6 lg:px-12">
+      <div className="max-w-[1800px] mx-auto px-16 lg:px-24">
         <div className="flex items-center justify-between h-20">
 
-          {/* Logo (UNCHANGED) */}
+          {/* Logo */}
           <a
             href="/"
-            className={`text-xl lg:text-2xl tracking-[0.25em] transition-colors ${isScrolled ? 'text-[#1B4332]' : 'text-white'
+            className={`text-2xl tracking-[0.2em] transition-colors ${isScrolled ? 'text-[#1B4332]' : 'text-white'
               }`}
           >
             THE SWISS RESIDENCY
@@ -46,33 +46,22 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-14">
 
-            {/* ROOMS */}
-            <button
-              onClick={() => navigate('/luxury-book')}
-              className={`text-base tracking-wider transition-colors ${isScrolled
-                  ? 'text-gray-700 hover:text-[#1B4332]'
-                  : 'text-white/90 hover:text-white'
-                }`}
-            >
-              ROOMS
-            </button>
-
-            {/* PROFILE */}
+            {/* Profile */}
             <button
               onClick={() => navigate('/profile')}
-              className={`text-base tracking-wider transition-colors ${isScrolled
+              className={`text-2xl tracking-[0.2em] transition-colors ${isScrolled
                   ? 'text-gray-700 hover:text-[#1B4332]'
-                  : 'text-white/90 hover:text-white'
+                  : 'text-white hover:text-white/80'
                 }`}
             >
               PROFILE
             </button>
 
-            {/* ADMIN */}
+            {/* Admin (if admin logged in) */}
             {isAdmin && (
               <button
                 onClick={() => navigate('/admin')}
-                className={`text-base tracking-wider transition-colors ${isScrolled
+                className={`text-2xl tracking-[0.2em] transition-colors ${isScrolled
                     ? 'text-orange-600 hover:text-orange-700'
                     : 'text-orange-300 hover:text-orange-100'
                   }`}
@@ -81,10 +70,10 @@ export function Navigation() {
               </button>
             )}
 
-            {/* BOOK NOW */}
+            {/* Book Now */}
             <button
               onClick={() => navigate('/luxury-book')}
-              className={`text-base tracking-wider px-7 py-2 border transition-all ${isScrolled
+              className={`text-2xl tracking-[0.2em] px-8 py-3 border transition-all ${isScrolled
                   ? 'border-[#1B4332] text-[#1B4332] hover:bg-[#1B4332] hover:text-white'
                   : 'border-white text-white hover:bg-white hover:text-[#1B4332]'
                 }`}
@@ -96,13 +85,15 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden ${isScrolled ? 'text-[#1B4332]' : 'text-white'}`}
+            className={`md:hidden ${isScrolled ? 'text-[#1B4332]' : 'text-white'
+              }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen
-              ? <X className="w-6 h-6" />
-              : <Menu className="w-6 h-6" />
-            }
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
 
         </div>
@@ -114,15 +105,8 @@ export function Navigation() {
           <div className="px-8 py-6 space-y-4">
 
             <button
-              onClick={() => navigate('/luxury-book')}
-              className="block text-base tracking-wider text-gray-700 hover:text-[#1B4332] w-full text-left"
-            >
-              ROOMS
-            </button>
-
-            <button
               onClick={() => navigate('/profile')}
-              className="block text-base tracking-wider text-gray-700 hover:text-[#1B4332] w-full text-left"
+              className="block text-sm tracking-wider text-gray-700 hover:text-[#1B4332] w-full text-left"
             >
               PROFILE
             </button>
@@ -130,7 +114,7 @@ export function Navigation() {
             {isAdmin && (
               <button
                 onClick={() => navigate('/admin')}
-                className="block text-base tracking-wider text-orange-600 hover:text-orange-700 w-full text-left"
+                className="block text-sm tracking-wider text-orange-600 hover:text-orange-700 w-full text-left"
               >
                 ADMIN
               </button>
@@ -138,7 +122,7 @@ export function Navigation() {
 
             <button
               onClick={() => navigate('/luxury-book')}
-              className="block text-center text-base tracking-wider px-6 py-2 border border-[#1B4332] text-[#1B4332] hover:bg-[#1B4332] hover:text-white transition-all"
+              className="block text-center text-sm tracking-wider px-6 py-2.5 border border-[#1B4332] text-[#1B4332] hover:bg-[#1B4332] hover:text-white transition-all"
             >
               BOOK NOW
             </button>
