@@ -1,6 +1,6 @@
 import { Hero } from '../components/Hero';
 import { BusinessClassAccommodations } from '../components/BusinessClassAccommodations';
-import { VideoSection } from '../components/VideoSection';
+import { HotelWalkaround } from "../components/HotelWalkaround";
 import { WhyChooseUs } from '../components/WhyChooseUs';
 import { SpecialOffers } from '../components/SpecialOffers';
 import { ServicesFacilities } from '../components/ServicesFacilities';
@@ -14,15 +14,26 @@ export function HomePage() {
   return (
     <>
       <Hero />
+
       <BusinessClassAccommodations />
-      <VideoSection />
+
+      {/* Walkaround Video Section */}
+      <HotelWalkaround />
+
       <WhyChooseUs />
+
       <SpecialOffers />
+
       <ServicesFacilities />
+
       <Location />
+
       <InstagramFeed />
+
       <Testimonials />
+
       <Contact />
+
       <FloatingWhatsApp />
     </>
   );
