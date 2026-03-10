@@ -31,37 +31,37 @@ export function Navigation() {
           : 'bg-transparent'
         }`}
     >
-      <div className="max-w-[1800px] mx-auto px-16 lg:px-24">
+      <div className="max-w-7xl mx-auto px-8 lg:px-16">
         <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
           <a
             href="/"
-            className={`text-2xl tracking-[0.2em] transition-colors ${isScrolled ? 'text-[#1B4332]' : 'text-white'
+            className={`text-xl tracking-[0.2em] transition-colors ${isScrolled ? 'text-[#1B4332]' : 'text-white'
               }`}
           >
             THE SWISS RESIDENCY
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-14">
+          <div className="hidden md:flex items-center gap-12">
 
-            {/* Profile */}
+            {/* PROFILE */}
             <button
               onClick={() => navigate('/profile')}
-              className={`text-2xl tracking-[0.2em] transition-colors ${isScrolled
+              className={`text-sm tracking-wider transition-colors ${isScrolled
                   ? 'text-gray-700 hover:text-[#1B4332]'
-                  : 'text-white hover:text-white/80'
+                  : 'text-white/90 hover:text-white'
                 }`}
             >
               PROFILE
             </button>
 
-            {/* Admin (if admin logged in) */}
+            {/* ADMIN */}
             {isAdmin && (
               <button
                 onClick={() => navigate('/admin')}
-                className={`text-2xl tracking-[0.2em] transition-colors ${isScrolled
+                className={`text-sm tracking-wider transition-colors ${isScrolled
                     ? 'text-orange-600 hover:text-orange-700'
                     : 'text-orange-300 hover:text-orange-100'
                   }`}
@@ -70,10 +70,10 @@ export function Navigation() {
               </button>
             )}
 
-            {/* Book Now */}
+            {/* BOOK NOW */}
             <button
               onClick={() => navigate('/luxury-book')}
-              className={`text-2xl tracking-[0.2em] px-8 py-3 border transition-all ${isScrolled
+              className={`text-sm tracking-wider px-6 py-2.5 border transition-all ${isScrolled
                   ? 'border-[#1B4332] text-[#1B4332] hover:bg-[#1B4332] hover:text-white'
                   : 'border-white text-white hover:bg-white hover:text-[#1B4332]'
                 }`}
