@@ -5,6 +5,7 @@ export function BusinessClassAccommodations() {
     <section className="py-20 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-start">
+
           {/* Image */}
           <motion.div
             className="relative h-[530px]"
@@ -13,6 +14,8 @@ export function BusinessClassAccommodations() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
           >
+
+            {/* Green vertical bar */}
             <motion.div
               className="absolute top-0 right-0 w-3 h-full bg-[#1B4332] z-20"
               initial={{ scaleY: 0 }}
@@ -21,7 +24,14 @@ export function BusinessClassAccommodations() {
               transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
               style={{ transformOrigin: 'top' }}
             />
-            <div className="bg-gray-200 h-64 w-full"></div>
+
+            {/* UNSPLASH IMAGE */}
+            <img
+              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2000&auto=format&fit=crop"
+              alt="Luxury hotel room"
+              className="h-full w-full object-cover rounded-sm"
+            />
+
           </motion.div>
 
           {/* Content */}
@@ -97,6 +107,7 @@ export function BusinessClassAccommodations() {
                 </motion.div>
               ))}
             </div>
+
           </div>
         </div>
       </div>
